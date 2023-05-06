@@ -1,17 +1,18 @@
 import { Connection, Client } from '@temporalio/client';
 
-export async function startWorkflow() {
+export async function startWorkflow(client_name: string): Promise<string[]> {
   const connection = await Connection.connect();
   const client = new Client({
     connection
   })
 
   const handle = await client.workflow.start('ExampleWorkflow', {
-    args: ['thiago.pereira'],
+    args: [client_name],
     taskQueue: 'hello-world',
     workflowId: `workflow-id-${Date.now()}`
   })
 
   console.log('Started workflow: ', handle.workflowId);
-  console.log('Result: ', await handle.result());
+  
+  return await handle.result()
 }

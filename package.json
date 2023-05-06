@@ -1,0 +1,15 @@
+{
+  "name": "getstart-with-temporal",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No test\""
+  },
+  "keywords": [
+    "temporal",
+    "nodejs"
+  ],
+  "author": "Thiago Pereira",
+  "license": "ISC"
+}

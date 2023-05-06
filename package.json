@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "watch": "nodemon src/worker.ts",
+    "workflow": "ts-node src/client.ts",
     "test": "echo \"No test\""
   },
   "keywords": [

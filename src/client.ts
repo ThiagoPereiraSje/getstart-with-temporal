@@ -1,6 +1,6 @@
 import { Connection, Client } from '@temporalio/client';
 
-async function run() {
+export async function run() {
   const connection = await Connection.connect();
   const client = new Client({
     connection

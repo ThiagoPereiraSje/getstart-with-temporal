@@ -1,7 +1,7 @@
 import { Worker } from '@temporalio/worker'
 import activities from './activities'
 
-async function run() {
+export async function run() {
   const worker = await Worker.create({
     workflowsPath: require.resolve('./workflows'),
     activities,
